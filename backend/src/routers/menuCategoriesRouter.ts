@@ -1,4 +1,4 @@
-import { pool } from "../../db/db";
+import { pool } from "../db/db";
 import { checkAuth } from "../auth/auth";
 import express, { Request, Response } from "express";
 export const menuCategoriesRouter = express.Router();

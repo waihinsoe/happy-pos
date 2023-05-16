@@ -1,6 +1,6 @@
 import express, { Request, Response } from "express";
 import { checkAuth } from "../auth/auth";
-import { pool } from "../../db/db";
+import { pool } from "../db/db";
 import { User } from "../types/user";
 import { fileUpload } from "../utils/fileUpload";
 export const appRouter = express.Router();

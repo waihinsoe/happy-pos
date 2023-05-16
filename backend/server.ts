@@ -3,10 +3,7 @@ dotenv.config();
 import express, { Request, Response } from "express";
 import bcrypt from "bcrypt";
 import cors from "cors";
-import { pool } from "./db/db";
-import jwt from "jsonwebtoken";
-import { config } from "./src/config/config";
-import { checkAuth } from "./src/auth/auth";
+
 import { menuRouter } from "./src/routers/menuRouter";
 import { menuCategoriesRouter } from "./src/routers/menuCategoriesRouter";
 import { authRouter } from "./src/routers/authRouter";

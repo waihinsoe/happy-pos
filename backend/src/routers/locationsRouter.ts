@@ -1,5 +1,5 @@
 import express, { Request, Response } from "express";
-import { pool } from "../../db/db";
+import { pool } from "../db/db";
 import { checkAuth } from "../auth/auth";
 export const locationsRouter = express.Router();
 
