@@ -8,11 +8,11 @@ interface MenuQueries {
 
 export const menuQueries: MenuQueries = {
   createMenu: async (createMenuParams) => {
-    const { name, price, locationIds, assetUrl, description } =
+    const { name, price, locationIds, asset_url, description } =
       createMenuParams;
     const text =
       "INSERT INTO menus(name, price, asset_url, description) VALUES($1, $2,$3,$4) RETURNING *";
-    const values = [name, price, assetUrl, description];
+    const values = [name, price, asset_url, description];
     const result = await pool.query(text, values);
     const menu = result.rows[0] as Menu;
     const menuId = menu.id as string;

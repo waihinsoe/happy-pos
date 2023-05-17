@@ -12,7 +12,7 @@ menuRouter.get("/", async (req: Request, res: Response) => {
 });
 
 menuRouter.post("/", checkAuth, async (req: Request, res: Response) => {
-  const { name, price, description, locationIds, assetUrl } = req.body;
+  const { name, price, description, locationIds, asset_url } = req.body;
   const isValid = name && locationIds && locationIds.length;
   if (!isValid) return res.sendStatus(400);
   const menu = await menuQueries.createMenu({
@@ -20,7 +20,7 @@ menuRouter.post("/", checkAuth, async (req: Request, res: Response) => {
     price,
     locationIds,
     description,
-    assetUrl,
+    asset_url,
   });
   res.send(menu);
 });

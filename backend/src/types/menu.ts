@@ -13,5 +13,5 @@ export interface CreateMenuParams {
   price: number;
   locationIds: string[];
   description: string;
-  assetUrl?: string;
+  asset_url?: string;
 }
