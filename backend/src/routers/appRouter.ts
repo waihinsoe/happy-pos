@@ -86,6 +86,7 @@ appRouter.post("/assets", (req: Request, res: Response) => {
       if (error) {
         return res.sendStatus(500);
       }
+      console.log(req.files);
       const files = req.files as Express.MulterS3.File[];
       const file = files[0];
       const assetUrl = file.location;
